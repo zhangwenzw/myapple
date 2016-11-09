@@ -45,13 +45,22 @@ nav>.lnav{
     display: none;
 }
 .lnav>li{
+    width:11%;
+    height:100%;
     float: left;
     line-height: 44px;
+    position: relative;
 }
 .lnav>li>a{
+    display: block;
     color: #fff;
     font-size:16px;
-    padding: 0 35px;
+    position: absolute;
+    top:0;bottom:0;margin:auto;
+    left:21%;
+}
+.lnav>li:first-child>a{
+    left:0;
 }
 .apple{
     float: left;
