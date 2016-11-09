@@ -1,0 +1,505 @@
+body,ul{
+    padding: 0;
+    margin: 0;
+}
+body,ul,li,a,h1,h2,h3,h4,h5,h6{
+    list-style:none;
+}
+* {
+    font-family: "HanHei SC", PingHei, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+/*头*/
+header {
+    width: 100%;
+    height: 40px;
+    background: #444;
+    border-bottom: #333;
+}
+header > div {
+    max-width: 976px;
+    height: 40px;
+    text-align: right;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #a8a8aa;
+    line-height: 40px;
+}
+/*导航*/
+nav{
+    width:100%;
+    height:44px;
+    background: #000;
+    opacity:0.8;
+    position: relative;
+    z-index: 2;
+}
+nav>.lnav{
+    max-width:1000px;
+    height:44px;
+    text-align: justify;
+    margin:0 auto;
+    display: none;
+}
+.lnav>li{
+    float: left;
+    line-height: 44px;
+}
+.lnav>li>a{
+    color: #fff;
+    font-size:16px;
+    padding: 0 35px;
+}
+.apple{
+    float: left;
+    width:40px;
+    height:44px;
+    background: url("../img/apple.svg") no-repeat center center;
+}
+.search{
+    float: left;
+    width:40px;
+    height:44px;
+    background: url("../img/search.svg") no-repeat center center;
+}
+.bag{
+    float: left;
+    width:38px;
+    height:44px;
+    background: url("../img/bag.svg") no-repeat center center;
+}
+.snav{
+    margin:0;
+    width:100%;
+    height:44px;
+    position: relative;
+    background: #000;
+    opacity:0.8;
+    z-index: 10;
+    display: block;
+}
+.snav span{
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+/*.dnav{*/
+    /*width:48px;*/
+    /*height:48px;*/
+    /*font-size: 30px;*/
+    /*text-align: center;*/
+    /*color: #fff;*/
+    /*left:20px;*/
+    /*cursor: pointer;*/
+/*}*/
+.menu{
+    width:48px;
+    height:48px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top:10px;
+    left:20px;
+    cursor: pointer;
+}
+.apple{
+    left:0;
+    right:0;
+    margin:auto;
+}
+.bag{
+    right:20px;
+}
+nav li a:hover,nav li span:hover{
+    opacity:0.8;
+}
+/*小屏点击导航*/
+.slide_nav{
+    display: none;
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:199;
+    background: #000;
+}
+.slide_nav .close{
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left:20px;
+    cursor: pointer;
+}
+.slide_nav .apple{
+    position: absolute;
+    top: 10px;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.slide_nav_con{
+    width:100%;
+    position: absolute;
+    top:44px;
+    overflow: hidden;
+    padding:0 50px;
+    /*display: none;*/
+}
+.slide_nav_con li{
+    width:100%;
+}
+.slide_nav_con li a,.slide_nav_con li span{
+    display: block;
+    width:100%;
+    border-bottom: 1px solid #333;
+    padding:0;
+    color: #f0f0f0;
+}
+.slide_nav_con li a:hover{
+    opacity:0.8;
+}
+.slide_nav_con li .search:hover{
+    opacity:1;
+}
+.slide_nav_con li .search{
+    font-size: 18px;
+    color: #fff;
+    padding-left:25px;
+    background-position: left;
+    border-bottom: 1px solid #fff;
+    cursor: text;
+}
+
+/*banner*/
+.wheel{
+    width:100%;
+    height:540px;
+    margin-top: -44px;
+    position: relative;
+    overflow: hidden;
+}
+.wheel>ul>li>a{
+    display: block;
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.wheel>ul>li>.banner1{
+    background:#000 url("../img/iphone_portrait_small.jpg") no-repeat center bottom;
+    background-size:contain;
+}
+.wheel>ul>li>.banner2{
+    background:url("../img/event_small.jpg") no-repeat center bottom;
+    background-size:cover;
+    left:100%;
+}
+.wheel>ul>li>.banner3{
+    background:#fff url("../img/macbookpro_portrait_small.jpg") no-repeat center bottom;
+    background-size:130%;
+    left:100%;
+}
+.btn{
+    width:200px;
+    height:2px;
+    position: absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    bottom:7%;
+    z-index:999;
+}
+.btn .btn-list{
+    width: 60px;
+    height:100%;
+    float: left;
+    background: #ccc;
+    margin-right: 10px;
+}
+.btn .btn-list:last-child{
+    margin-right: 0;
+}
+.btn .btn-list .progress{
+    width:0;
+    height:100%;
+    background: #333;
+}
+.left,.right{
+    width:20%;
+    height:100%;
+    position: absolute;
+    top:0;
+    z-index:1000;
+}
+.right{
+    right:0;
+}
+.leftbtn,.rightbtn{
+    width:60px;
+    height:60px;
+    background:rgba(60,60,60,0.5);
+    position: absolute;
+    top:0;bottom:0;left:0;right:0;margin:auto;
+    border-radius:60%;
+    font-size: 40px;
+    font-family: "宋体";
+    text-align: center;
+    line-height: 60px;
+    color: #ccc;
+    opacity:0;
+    transition: opacity .5s linear;
+}
+.left:hover>.leftbtn{
+    opacity:1;
+}
+.right:hover>.rightbtn{
+    opacity:1;
+}
+.slide-title{
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    top:10%;
+    width: 100%;
+    text-align: center;
+}
+.slide-title h1,h2{
+    margin: 5px;
+}
+.slide-title h1{
+    font-size: 34px;
+}
+.slide-title h2{
+    font-size: 28px;
+}
+
+
+
+/*banner下方图片*/
+.container-fluid>.row>div{
+    border: 1px solid #fff;
+    height:200px;
+}
+.container-fluid>.row>.hot1{
+    background: url(../img/hot-s-1.jpg) no-repeat center;
+}
+.container-fluid>.row>.hot2{
+    background: url(../img/hot-s-2.jpg) no-repeat center;
+}
+.container-fluid>.row>.hot3{
+    background: url(../img/hot-s-3.jpg) no-repeat center;
+}
+.container-fluid>.row>.hot4{
+    background: url(../img/hot-s-4.jpg) no-repeat center;
+}
+
+
+/*底部*/
+.foot{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    padding:0 30px;
+    background: #f2f2f2;
+    color: #666;
+    font-size: 7px;
+    font-weight: 600;
+}
+.foot>div{
+    width:100%;
+    max-width: 980px;
+    margin:0 auto;
+}
+.foot_header span{
+    display: block;
+    width:100%;
+    margin:0 auto;
+    font-size:9px;
+    /*line-height: 50px;*/
+    padding: 20px 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.foot>.footer{
+    width:100%;
+    max-width:980px;
+    height:220px;
+    margin:0 auto;
+    margin-top:20px;
+    overflow: hidden;
+    display:none;
+}
+.footer>div{
+    width:20%;
+    text-align: left;
+    float: left;
+    font-size: 10px;
+}
+.footer>div>h3{
+    line-height: 1.66667;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: #222;
+    margin:5px 0;
+    font-weight: 800;
+}
+.footer>div>a{
+    display: block;
+    color: #777;
+    font-size: 5px;
+}
+.foot a:hover{
+    text-decoration: underline;
+    color: #555;
+}
+.foot_footer a{
+    color:#0098D9;
+    cursor: pointer;
+}
+.foot_footer>span{
+    /*line-height: 30px;*/
+    padding:10px 0;
+    color: #999;
+}
+.foot_footer>div{
+    margin-top:10px;
+}
+.foot_footer>div>a{
+    float: right;
+    width: 46px;
+    padding-left:19px;
+    height:16px;
+    font-size: 9px;
+    color: #333;
+    background: url("../img/16.png") no-repeat;
+}
+.foot_footer>div>i{
+    font-size: 9px;
+    color: #999;
+    font-style:normal;
+    margin-right: 20px;
+}
+.foot_footer>div>i>a{
+    color: #666;
+}
+.foot_footer>div>i>i{
+    padding:0 5px;
+    font-style:normal;
+}
+/*小屏底部*/
+.foot>.sfooter{
+    display: block;
+    margin-top:20px;
+}
+.sfooter>li{
+    padding-bottom:10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.sfooter h3{
+    display: block;
+    width:100%;
+    font-size:12px;
+    color: #333;
+    padding:12px 0;
+    margin:0;
+    cursor: pointer;
+}
+.sfooter h3 span{
+    float: right;
+    font-size:14px;
+}
+.sfooter>li>ul>li>a{
+    padding: 0 14px;
+    display: block;
+    color: #888;
+    line-height: 30px;
+}
+.sfooter>li>ul{
+    display: none;
+}
+
+/*中屏*/
+@media screen and (min-width: 760px) {
+    /*头*/
+    nav>.lnav{
+        display: block;
+    }
+    nav>.snav{
+        display: none;
+    }
+    /*banner*/
+    .wheel>ul>li>.banner1{
+        background:#000 url("../img/iphone_square_large.jpg") no-repeat center bottom;
+        background-size: contain;
+    }
+    .wheel>ul>li>.banner2{
+        background:url("../img/event_medium.jpg") no-repeat center bottom;
+        background-size:cover;
+        left:100%;
+    }
+    .wheel>ul>li>.banner3{
+        background:#fff url("../img/macbookpro_medium.jpg") no-repeat center bottom;
+        background-size: 100%;
+        left:100%;
+    }
+
+    .container-fluid>.row>.hot1{
+        background: url(../img/hot-m-1.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot2{
+        background: url(../img/hot-m-2.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot3{
+        background: url(../img/hot-m-3.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot4{
+        background: url(../img/hot-m-4.jpg) no-repeat center;
+    }
+    /*底部*/
+    .foot>.footer{
+        display: block;
+    }
+    .foot>.sfooter{
+        display: none;
+    }
+}
+
+/*大屏*/
+@media screen and (min-width: 1068px) {
+    /*banner*/
+    .wheel>ul>li>.banner1{
+        background:#000 url("../img/iphone_large.jpg") no-repeat center top;
+        background-size: contain;
+    }
+    .wheel>ul>li>.banner2{
+        background:url("../img/event_large.jpg") no-repeat center 40%;
+        background-size: cover;
+        left:100%;
+    }
+    .wheel>ul>li>.banner3{
+        background:#fff url("../img/macbookpro_portrait_small.jpg") no-repeat center 200px;
+        background-size:120%;
+        left:100%;
+    }
+
+    .container-fluid>.row>.hot1{
+        background: url(../img/hot-l-1.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot2{
+        background: url(../img/hot-l-2.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot3{
+        background: url(../img/hot-l-3.jpg) no-repeat center;
+    }
+    .container-fluid>.row>.hot4{
+        background: url(../img/hot-l-4.jpg) no-repeat center;
+    }
+}
