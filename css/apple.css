@@ -410,6 +410,9 @@ nav li a:hover,nav li span:hover{
 .foot_footer>span{
     border:0;
 }
+.foot_footer>span:last-child >a{
+    color: #999;
+}
 /*小屏底部*/
 .foot>.sfooter{
     display: block;
