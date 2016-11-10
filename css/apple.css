@@ -35,7 +35,7 @@ nav{
     background: #000;
     opacity:0.8;
     position: relative;
-    z-index: 2;
+    z-index: 2000;
 }
 nav>.lnav{
     max-width:1000px;
@@ -97,26 +97,26 @@ nav>.lnav{
     bottom:0;
     margin:auto;
 }
-/*.dnav{*/
-    /*width:48px;*/
-    /*height:48px;*/
-    /*font-size: 30px;*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*left:20px;*/
-    /*cursor: pointer;*/
-/*}*/
-.menu{
+.dnav{
     width:48px;
     height:48px;
     font-size: 30px;
     text-align: center;
     color: #fff;
-    position: absolute;
-    top:10px;
     left:20px;
     cursor: pointer;
 }
+/*.menu{*/
+    /*width:48px;*/
+    /*height:48px;*/
+    /*font-size: 30px;*/
+    /*text-align: center;*/
+    /*color: #fff;*/
+    /*position: absolute;*/
+    /*top:10px;*/
+    /*left:20px;*/
+    /*cursor: pointer;*/
+/*}*/
 .apple{
     left:0;
     right:0;
@@ -169,7 +169,7 @@ nav li a:hover,nav li span:hover{
     display: block;
     width:100%;
     border-bottom: 1px solid #333;
-    padding:0;
+    padding:10px 0;
     color: #f0f0f0;
 }
 .slide_nav_con li a:hover{

@@ -1,13 +1,16 @@
 $(function(){
     var ww=$(window).width();
     var wh=$(window).height();
-    $(".menu").click(function(){
-        $(".slide_nav").css({width:ww,height:wh}).slideToggle();
+    $(".dnav").click(function(){
+        $(".slide_nav").css({display:"block"}).siblings().css({display:"none"});
     });
+    $(".close").click(function(){
+        $(".slide_nav").css({display:"none"}).siblings().css({display:"block"});
+    });
+
     $(".sfooter>li>h3").click(function(){
         $(this).next().slideToggle();
     })
-
     /*轮播图*/
     var currentNum=0;
     var nextNum=0;
