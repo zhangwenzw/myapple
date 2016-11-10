@@ -382,15 +382,19 @@ nav li a:hover,nav li span:hover{
     margin-top:10px;
 }
 .foot_footer>div>a{
-    float: right;
-    width: 46px;
+    float: left;
+    width: 100%;
     padding-left:19px;
-    height:16px;
+    height:60px;
+    line-height: 60px;
     font-size: 9px;
     color: #333;
-    background: url("../img/16.png") no-repeat;
+    background: url("../img/16.png") no-repeat left center;
 }
 .foot_footer>div>i{
+    width:100%;
+    display: block;
+
     font-size: 9px;
     color: #999;
     font-style:normal;
@@ -402,6 +406,9 @@ nav li a:hover,nav li span:hover{
 .foot_footer>div>i>i{
     padding:0 5px;
     font-style:normal;
+}
+.foot_footer>span{
+    border:0;
 }
 /*小屏底部*/
 .foot>.sfooter{
@@ -510,5 +517,19 @@ nav li a:hover,nav li span:hover{
     }
     .container-fluid>.row>.hot4{
         background: url(../img/hot-l-4.jpg) no-repeat center;
+    }
+    /*底部*/
+    .foot_footer>div>a{
+        float: right;
+        height:16px;
+        width:50px;
+        line-height: 16px;
+    }
+    .foot_footer>div>i{
+        width: 46px;
+        display: inline;
+    }
+    .foot_footer>span:first-child{
+        border-bottom: 1px solid #e3e3e3;
     }
 }
